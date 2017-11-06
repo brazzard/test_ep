@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -7,7 +8,9 @@ from config import *
 
 
 class SearchText(unittest.TestCase):
+
     def setUp(self):
+
         # create FF session
         self.driver = webdriver.Firefox()
 
@@ -38,7 +41,7 @@ class SearchText(unittest.TestCase):
             list_of_links.append(link.get_attribute('href'))
         return list_of_links
 
-    def test_search_by_text(self):
+    def test_check_first_link_title(self):
 
         # find and click first link
         self.search_results()
@@ -48,9 +51,10 @@ class SearchText(unittest.TestCase):
         assert search_word in self.driver.title
         print '"{}" is found in page title "{}"'.format(search_word, self.driver.title)
 
-    def test_search_for_domain(self):
+    def test_search_for_expected_domain(self):
         result_list = []
         self.search_results()
+
         # get list of links for 1st page
         list_of_links = self.get_list_of_found_links(list_of_links=[])
 

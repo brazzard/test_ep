@@ -1,0 +1,2 @@
+# Python 2.6 compatibility
+selenium==3.7.0

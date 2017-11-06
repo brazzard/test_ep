@@ -66,7 +66,6 @@ class SearchText(unittest.TestCase):
             result_list = self.get_list_of_found_links(list_of_links)
 
         # check if the domain is found
-        # if result_list and search_domain in result_list:
         expected_domain = ""
         for domain in result_list:
             if search_domain in domain:

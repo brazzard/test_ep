@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
+
 class BasePage(object):
 
     def __init__(self, driver):
@@ -24,8 +25,7 @@ class MainPage(BasePage):
 class SearchResultsPage(BasePage):
 
     def first_link(self):
-        return self.driver.find_element(By.CSS_SELECTOR,
-                                        "#rso > div:nth-child(1) > div > div:nth-child(1) > div > div > h3 > a")
+        return self.driver.find_element(By.CSS_SELECTOR, "#rso h3 a")
 
     def search_result_links_on_page(self):
 

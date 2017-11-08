@@ -10,12 +10,12 @@ class BaseTest(unittest.TestCase):
 
     def setUp(self):
 
-        #self.driver = webdriver.Firefox()
+        self.driver = webdriver.Firefox()
 
-        desired_cap = browser_config['ff_44_osx_hs']
-        self.driver = webdriver.Remote(
-            command_executor='http://' + USERNAME + ':' + ACCESS_KEY + '@hub.browserstack.com:80/wd/hub',
-            desired_capabilities=desired_cap)
+        # desired_cap = browser_config['ff_44_osx_hs']
+        # self.driver = webdriver.Remote(
+        #     command_executor='http://' + USERNAME + ':' + ACCESS_KEY + '@hub.browserstack.com:80/wd/hub',
+        #     desired_capabilities=desired_cap)
 
         # open page
         self.driver.get(base_url)
@@ -49,7 +49,7 @@ class SearchTest(BaseTest):
 
     def test_search_for_expected_domain(self):
         q = self.main_page.search_field()
-        self.main_page.perform_search(q, search_word)
+        self.main_page.perform_search(q, self.search_word)
         # get list of links for 1st page
         result_list = self.search_result_page.search_result_links_on_given_pages(self.num_of_pages_to_check)
         test_search_for_expected_domain_result = False

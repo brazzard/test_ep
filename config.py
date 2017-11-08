@@ -1,11 +1,3 @@
-# Just for selenium_test_ep.py
-search_result_selectors = "#rso h3 a"
-first_link = "#rso > div:nth-child(1) > div > div:nth-child(1) > div > div > h3 > a"
-num_of_pages_to_check = 5
-search_word = "Automation"
-search_domain = "siemens.com"
-# valid domain "testautomationday.com"
-
 USERNAME = "John Doe"
 ACCESS_KEY = "accesskey"
 base_url = "http://www.google.com"

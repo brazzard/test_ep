@@ -10,5 +10,5 @@ pip install -r requirements.txt
 
 How to run:
 ```Python
-python selenium_test_ep.py
+python search_test.py
 ```

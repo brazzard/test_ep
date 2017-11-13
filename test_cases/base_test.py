@@ -11,7 +11,7 @@ class BaseTest(unittest.TestCase):
 
     def setUp(self):
 
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Firefox(executable_path=geckodriver_path)
 
         # desired_cap = browser_config['ff_44_osx_hs']
         # self.driver = webdriver.Remote(

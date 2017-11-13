@@ -2,6 +2,8 @@ USERNAME = "John Doe"
 ACCESS_KEY = "accesskey"
 base_url = "http://www.google.com"
 
+geckodriver_path = '/usr/local/bin/geckodriver'
+
 browser_config = {
     'chrome_62_win_10': {
         'browser': 'Chrome',
